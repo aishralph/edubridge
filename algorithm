@@ -1,90 +1,50 @@
 1.Given an array of integers and a target sum, return indices of the two numbers that add up to the target.
 
-Start
-
-Input size of array
-Input array elements
-Input target sum
-
-For i from 0 to size-1 do
-    For j from i+1 to size-1 do
-        If arr[i] + arr[j] = target then
-            Display i and j
-
-Stop
+step 1 : start
+step 2 : Initialize a hash map to store visited numbers and their indices.
+step 3 : For each number in the array:
+         Calculate the complement (target - current number).
+step 4 : If the complement exists in the map, return the indices.
+         Else, store the number and its index in the map.
+step 5 : stop
 
 2.Implement binary search to find the index of a target element in a sorted array.
-Start
 
-Input size
-Input sorted array elements
-Input target element
+step 1 : start
+step 2 : Initialize two pointers: low and high.
+step 3 : Repeat until low > high:
+step 4 : Calculate mid.
+         If arr[mid] == target, return mid.
+         If arr[mid] < target, search right half.
+         Else, search left half.
+step 5 : stop
 
-Set low = 0
-Set high = size - 1
 
-While low ≤ high do
-    mid = (low + high) / 2
-    If arr[mid] = target then
-        Display mid
-        Stop
-    Else if arr[mid] < target then
-        low = mid + 1
-    Else
-        high = mid - 1
-
-Display not found
-
-Stop
 
 3.Write a function to check if two strings are anagrams of each other.
 
-Start
+step 1 : start 
+step 2 : Check if both strings have the same length.
+step 3 : Sort both strings and compare them.
+step 4 : stop
 
-Input string1
-Input string2
-
-If length of both strings not equal then
-    Not anagram
-
-Sort string1
-Sort string2
-
-If string1 = string2 then
-    Anagram
-Else
-    Not anagram
-
-Stop
 
 4.Given a string, find the length of the longest substring without repeating characters.
 
-Start
+step 1 : start
+step 2 : Use a sliding window with two pointers.
+step 3 : Track characters in a set.
+step 4 : Move the right pointer and add characters until a repeat.
+step 5 : When repeated, move the left pointer until it's unique again.
+step 6 : Track the max window size.
+step 7 : stop
 
-Input string
-
-For i from 0 to length do
-    For j from i to length do
-        Check substring i to j for repeats
-        If no repeats then
-            Update max length
-
-Display max length
-
-Stop
 
 5.Write a code that counts how many palindromic substrings are present in a given string.
 
-Start
+step 1 : start
+step 2 : For each character in the string, expand around that character and its neighbor.
+step 3 : Check both odd-length and even-length palindromes.
+step 4 : Expand while the substring is a palindrome and count.
+step 5 : stop
 
-Input string
-count = 0
-
-For i from 0 to length do
-    For j from i to length do
-        If substring(i, j) is palindrome then
-            count = count + 1
-
-Display count
-
-Stop
